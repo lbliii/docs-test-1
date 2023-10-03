@@ -1,3 +1,8 @@
+import os 
+import sys
+
+sys.path.insert(0, os.path.abspath('_themes'))
+
 # Configuration file for the Sphinx documentation builder.
 #
 # For the full list of built-in configuration values, see the documentation:
@@ -13,15 +18,30 @@ author = 'Tara, LB'
 # -- General configuration ---------------------------------------------------
 # https://www.sphinx-doc.org/en/master/usage/configuration.html#general-configuration
 
-extensions = []
+extensions = ["sphinxawesome_theme",
+    "sphinx.ext.autodoc",
+    "sphinx.ext.intersphinx",
+    "sphinx.ext.extlinks",
+    "sphinx.ext.viewcode",
+    "sphinx_sitemap",
+    "sphinx_design",
+    "sphinxawesome_theme.docsearch",
+    "sphinxawesome_theme.highlighting",]
 
 templates_path = ['_templates']
-exclude_patterns = []
+exclude_patterns = ['_themes']
 
 
 
 # -- Options for HTML output -------------------------------------------------
 # https://www.sphinx-doc.org/en/master/usage/configuration.html#options-for-html-output
 
-html_theme = 'alabaster'
+html_theme = 'sphinxawesome_theme'
+html_theme_path = ["_themes"]
 html_static_path = ['_static']
+html_baseurl = 'https://docs.whatever.com'
+
+html_theme_options = {
+    "repository_url": "https://github.com/lbliii/docs-test-1",
+    "use_repository_button": True,
+}

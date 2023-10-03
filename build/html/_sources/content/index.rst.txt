@@ -3,7 +3,5 @@ Welcome
 
 .. toctree::
    :maxdepth: 2
-   :hidden:
-   :glob:
 
-   ./content/*/index
+   ./*/index
