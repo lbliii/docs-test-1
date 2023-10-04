@@ -1,3 +1,4 @@
 sphinx 
 sphinx_design
 sphinx_sitemap
+bs4
